@@ -15,4 +15,8 @@ Esta API permite que os usuários gerem um conjunto de perguntas de múltipla es
 
 5. Se tudo ocorrer corretamente, um array com 5 objetos JSON será retornado, cada objeto do array sendo uma questão, tendo o seguinte formato:
 
-![response example](/response-example.png")
+![response example](/response-example.png)
+
+## Observações
+- O objeto *lyric* no *body* pode ser enviado exatamente igual ao do exemplo acima, visto que o próprio service vai formatar o texto para um retorno que possa ser usado;
+- Como dito anteriormente, talvez seja necessário gerar uma nova API Key no site do Gemini para developers.
