@@ -25,10 +25,13 @@ app.post("/generate-test", async (req, res) => {
       
         {
           description: "Insert the first question here...",
-          a: { option: "Option A", rightAnswer: false },
-          b: { option: "Option B", rightAnswer: false },
-          c: { option: "Option C", rightAnswer: true },
-          d: { option: "Option D", rightAnswer: false },
+           "answers": {
+                  "a": { "option": "Option A", "rightAnswer": false },
+                  "b": { "option": "Option B", "rightAnswer": false },
+                  "c": { "option": "Option C", "rightAnswer": true },
+                  "d": { "option": "Option D", "rightAnswer": false }
+                }
+              }
         },
         // Repeat for 4 more questions
 
