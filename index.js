@@ -1,11 +1,14 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { formatLyricTest } from "./helper.js";
 
 dotenv.config();
 
 const app = express();
+
+app.use(cors()); 
 app.use(express.json());
 
 app.post("/generate-test", async (req, res) => {
@@ -53,6 +56,8 @@ app.post("/generate-test", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("AI Lyric Service works...");
 });
+
+
